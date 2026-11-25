@@ -1,0 +1,2 @@
+Initial_X_m,Initial_Y_m,Goal_X_m,Goal_Y_m,Final_X_m,Final_Y_m,Final_Position_Error_m,Final_Speed_mps,Simulation_Time_s,Simulation_Steps,Global_Path_Length_m,Trajectory_Length_m,Total_Waypoints,Waypoints_Reached,LiDAR_Scans,LiDAR_Measurements,Goal_Reached,Collision_Detected,Continuous_Collision_Detected,Simulation_Status
+5,1.5,5,8.5,4.99126910567721,8.47201229583907,0.029317914316599,0.048555079762288,63.45,1269,7.02882456112707,6.98202844155222,71,71,1269,190760,1,0,0,GOAL REACHED

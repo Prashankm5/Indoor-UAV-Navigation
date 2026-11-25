@@ -1,0 +1,2 @@
+Room_Width_m,Room_Height_m,Grid_Resolution_m,UAV_Radius_m,Safety_Margin_m,LiDAR_Max_Range_m,LiDAR_Angular_Resolution_deg,LiDAR_Orientation_deg,Start_X_m,Start_Y_m,Goal_X_m,Goal_Y_m
+10,10,0.1,0.25,0.15,5,1,0,1.5,1.5,8.5,8.5
