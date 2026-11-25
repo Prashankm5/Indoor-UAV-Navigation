@@ -61,57 +61,57 @@ Baseline environment used to evaluate the navigation pipeline.
 
 Evaluates navigation after changing obstacle positions.
 
-![E2 Figure 1](docs/images/E2_Relocated_Obstacles_Figure_01.png)
+![E2 Figure 1](Results\E2_Relocated_Obstacles\Figure_01.png)
 
-![E2 Figure 2](docs/images/E2_Relocated_Obstacles_Figure_02.png)
+![E2 Figure 2](Results\E2_Relocated_Obstacles\Figure_02.png)
 
-![E2 Figure 3](docs/images/E2_Relocated_Obstacles_Figure_03.png)
+![E2 Figure 3](Results\E2_Relocated_Obstacles\Figure_03.png)
 
-![E2 Figure 4](docs/images/E2_Relocated_Obstacles_Figure_04.png)
+![E2 Figure 4](Results\E2_Relocated_Obstacles\Figure_04.png)
 
-![E2 Figure 5](docs/images/E2_Relocated_Obstacles_Figure_05.png)
+![E2 Figure 5](Results\E2_Relocated_Obstacles\Figure_05.png)
 
 ### E3 — Narrow Passage
 
 Evaluates path planning and waypoint tracking through a narrow passage.
 
-![E3 Figure 1](Results\E1_Reference\Figure_01.png)
+![E3 Figure 1](Results\E3_Narrow_Passage\Figure_01.png)
 
-![E3 Figure 2](Results\E1_Reference\Figure_02.png)
+![E3 Figure 2](Results\E3_Narrow_Passage\Figure_02.png)
 
-![E3 Figure 3](Results\E1_Reference\Figure_03.png)
+![E3 Figure 3](Results\E3_Narrow_Passage\Figure_03.png)
 
-![E3 Figure 4](Results\E1_Reference\Figure_04.png)
+![E3 Figure 4](Results\E3_Narrow_Passage\Figure_04.png)
 
-![E3 Figure 5](Results\E1_Reference\Figure_05.png)
+![E3 Figure 5](Results\E3_Narrow_Passage\Figure_05.png)
 
 ### E4 — Cluttered Environment
 
 Evaluates navigation in an environment containing multiple obstacles.
 
-![E4 Figure 1](docs/images/E4_Cluttered_Environment_Figure_01.png)
+![E4 Figure 1](Results\E4_Cluttered_Environment\Figure_01.png)
 
-![E4 Figure 2](docs/images/E4_Cluttered_Environment_Figure_02.png)
+![E4 Figure 2](Results\E4_Cluttered_Environment\Figure_02.png)
 
-![E4 Figure 3](docs/images/E4_Cluttered_Environment_Figure_03.png)
+![E4 Figure 3](Results\E4_Cluttered_Environment\Figure_03.png)
 
-![E4 Figure 4](docs/images/E4_Cluttered_Environment_Figure_04.png)
+![E4 Figure 4](Results\E4_Cluttered_Environment\Figure_04.png)
 
-![E4 Figure 5](docs/images/E4_Cluttered_Environment_Figure_05.png)
+![E4 Figure 5](Results\E4_Cluttered_Environment\Figure_05.png)
 
 ### E5 — Different Start and Goal
 
 Evaluates navigation with a modified start-goal configuration.
 
-![E5 Figure 1](docs/images/E5_Different_Start_Goal_Figure_01.png)
+![E5 Figure 1](Results\E5_Different_Start_Goal\Figure_01.png)
 
-![E5 Figure 2](docs/images/E5_Different_Start_Goal_Figure_02.png)
+![E5 Figure 2](Results\E5_Different_Start_Goal\Figure_02.png)
 
-![E5 Figure 3](docs/images/E5_Different_Start_Goal_Figure_03.png)
+![E5 Figure 3](Results\E5_Different_Start_Goal\Figure_03.png)
 
-![E5 Figure 4](docs/images/E5_Different_Start_Goal_Figure_04.png)
+![E5 Figure 4](Results\E5_Different_Start_Goal\Figure_04.png)
 
-![E5 Figure 5](docs/images/E5_Different_Start_Goal_Figure_05.png)
+![E5 Figure 5](Results\E5_Different_Start_Goal\Figure_05.png)
 
 ---
 
