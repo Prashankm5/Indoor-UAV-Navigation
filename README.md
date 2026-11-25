@@ -75,15 +75,15 @@ Evaluates navigation after changing obstacle positions.
 
 Evaluates path planning and waypoint tracking through a narrow passage.
 
-![E3 Figure 1](docs/images/E3_Narrow_Passage_Figure_01.png)
+![E3 Figure 1](Results\E1_Reference\Figure_01.png)
 
-![E3 Figure 2](docs/images/E3_Narrow_Passage_Figure_02.png)
+![E3 Figure 2](Results\E1_Reference\Figure_02.png)
 
-![E3 Figure 3](docs/images/E3_Narrow_Passage_Figure_03.png)
+![E3 Figure 3](Results\E1_Reference\Figure_03.png)
 
-![E3 Figure 4](docs/images/E3_Narrow_Passage_Figure_04.png)
+![E3 Figure 4](Results\E1_Reference\Figure_04.png)
 
-![E3 Figure 5](docs/images/E3_Narrow_Passage_Figure_05.png)
+![E3 Figure 5](Results\E1_Reference\Figure_05.png)
 
 ### E4 — Cluttered Environment
 
