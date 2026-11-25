@@ -56,7 +56,7 @@ end
 % 4 = E4_Cluttered_Environment
 % 5 = E5_Different_Start_Goal
 
-%selected_scenarios = [1, 3, 5];
+%selected_scenarios = [1, 3];
 
 % To run all scenarios:
 selected_scenarios = 1:5;
@@ -392,70 +392,141 @@ for selected_number = 1:length(selected_scenarios)
         fprintf('============================================\n');
 
 
+                
         % ======================================================
         % STEP 8.7: PLOT INITIAL LIDAR POINT CLOUD
         % ======================================================
-
+        
         point_cloud_figure = figure( ...
             'Name', [scenario_name ' - Initial LiDAR Point Cloud'], ...
             'NumberTitle', 'off', ...
             'Color', 'w');
-
+        
         scenario_figure_handles{end+1} = point_cloud_figure;
-
+        
         hold on;
         grid on;
         axis equal;
-
+        
         xlim([0, room_width]);
         ylim([0, room_height]);
-
+        
         xlabel('X Position (m)');
         ylabel('Y Position (m)');
-
+        
+        % ------------------------------------------------------
+        % ROOM BOUNDARY
+        % ------------------------------------------------------
+        
         rectangle('Position', [0, 0, room_width, room_height], ...
             'EdgeColor', 'k', ...
-            'LineWidth', 2);
-
-
+            'LineWidth', 2, ...
+            'HandleVisibility', 'off');
+        
+        % ------------------------------------------------------
+        % ACTUAL OBSTACLES
+        % ------------------------------------------------------
+        
         theta = linspace(0, 2*pi, 200);
-
+        
         for obstacle_number = 1:size(obstacles, 1)
-
+        
             obstacle_x = obstacles(obstacle_number, 1);
             obstacle_y = obstacles(obstacle_number, 2);
             obstacle_radius = obstacles(obstacle_number, 3);
-
+        
             circle_x = obstacle_x + obstacle_radius*cos(theta);
             circle_y = obstacle_y + obstacle_radius*sin(theta);
-
+        
             fill(circle_x, circle_y, [0.85, 0.25, 0.25], ...
-                'EdgeColor', 'k');
-
+                'EdgeColor', 'k', ...
+                'HandleVisibility', 'off');
+        
         end
-
-
+        
+        % ------------------------------------------------------
+        % DETECTED LIDAR POINTS
+        % ------------------------------------------------------
+        
         if ~isempty(detected_points)
-
+        
             scatter(detected_points(:,1), detected_points(:,2), ...
-                12, [0.00, 0.65, 0.15], 'filled');
-
+                12, [0.00, 0.65, 0.15], 'filled', ...
+                'HandleVisibility', 'off');
+        
         end
-
-
+        
+        % ------------------------------------------------------
+        % LIDAR POSITION
+        % ------------------------------------------------------
+        
         plot(lidar_position(1), lidar_position(2), ...
             'bo', ...
             'MarkerFaceColor', 'b', ...
-            'MarkerSize', 9);
-
+            'MarkerSize', 9, ...
+            'HandleVisibility', 'off');
+        
+        % ------------------------------------------------------
+        % TITLE
+        % ------------------------------------------------------
+        
         title('Initial LiDAR Point Cloud');
-
-        legend('Room boundary', 'Actual obstacles', ...
-            'Detected LiDAR points', 'LiDAR position', ...
+        
+        % ------------------------------------------------------
+        % LEGEND HANDLES
+        % ------------------------------------------------------
+        
+        % Room boundary: black line
+        h_room = plot(nan, nan, 'k-', ...
+            'LineWidth', 2);
+        
+        % Actual obstacles: red filled circle
+        h_obstacles = plot(nan, nan, 'o', ...
+            'MarkerSize', 9, ...
+            'MarkerFaceColor', [0.85, 0.25, 0.25], ...
+            'MarkerEdgeColor', 'k', ...
+            'LineStyle', 'none');
+        
+        % Detected LiDAR points: green dots
+        h_lidar_points = plot(nan, nan, '.', ...
+            'Color', [0.00, 0.65, 0.15], ...
+            'MarkerSize', 12, ...
+            'LineStyle', 'none');
+        
+        % LiDAR position: blue filled circle
+        h_lidar_position = plot(nan, nan, 'bo', ...
+            'MarkerFaceColor', 'b', ...
+            'MarkerSize', 9, ...
+            'LineStyle', 'none');
+        
+        % ------------------------------------------------------
+        % CREATE LEGEND
+        % ------------------------------------------------------
+        
+        lgd = legend([ ...
+            h_room, ...
+            h_obstacles, ...
+            h_lidar_points, ...
+            h_lidar_position], ...
+            { ...
+            'Room Boundary', ...
+            'Actual Obstacles', ...
+            'Detected LiDAR Points', ...
+            'LiDAR Position'}, ...
             'Location', 'best');
-
+        
+        % ------------------------------------------------------
+        % LEGEND APPEARANCE
+        % ------------------------------------------------------
+        
+        set(lgd, ...
+            'TextColor', 'w', ...
+            'Color', [0.15, 0.15, 0.15], ...
+            'EdgeColor', 'w', ...
+            'FontSize', 10, ...
+            'Box', 'on');
+        
         hold off;
-
 
         % ======================================================
         % STEP 8.8: A* GLOBAL PATH PLANNING
