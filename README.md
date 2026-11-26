@@ -212,9 +212,7 @@ Obstacles are represented using circular geometry.
 Obstacles are inflated to account for the UAV radius and an additional safety margin.
 
 $$
-R_{\mathrm{inflated}}
-=
-R_{\mathrm{UAV}} + d_{\mathrm{safety}}
+R_{\mathrm{inflated}} = R_{\mathrm{UAV}} + R_{\mathrm{safety}}
 $$
 
 Using:
@@ -244,7 +242,7 @@ $$
 where:
 
 - $g(n)$: Accumulated cost from the start.
-- $h(n)$: Estimated cost to the goal.
+- $h(n)$: Estimated cost to the goal(Huristic).
 - $f(n)$: Total estimated cost.
 
 The planner uses an eight-connected neighbourhood:
@@ -269,15 +267,11 @@ $$
 The numerical integration uses semi-implicit Euler:
 
 $$
-\mathbf{v}_{k+1}
-=
-\mathbf{v}_k + \mathbf{a}_k\Delta t
+\mathbf{v}_{k+1} = \mathbf{v}_k + \mathbf{a}_k \Delta t
 $$
 
 $$
-\mathbf{p}_{k+1}
-=
-\mathbf{p}_k + \mathbf{v}_{k+1}\Delta t
+\mathbf{p}_{k+1} = \mathbf{p}_k + \mathbf{v}_{k+1}\Delta t
 $$
 
 Acceleration and velocity are limited by predefined maximum values.
@@ -289,17 +283,13 @@ This model does not represent complete six-degree-of-freedom multirotor dynamics
 The position error is:
 
 $$
-\mathbf{e}
-=
-\mathbf{p}_{\mathrm{target}}-\mathbf{p}
+\mathbf{e} = \mathbf{p}_{\mathrm{target}} - \mathbf{p}
 $$
 
 The acceleration command is:
 
 $$
-\mathbf{a}_{\mathrm{cmd}}
-=
-K_p\mathbf{e}-K_d\mathbf{v}
+\mathbf{a}_{\mathrm{cmd}} = K_p\mathbf{e} - K_d\mathbf{v}
 $$
 
 The controller function supports an integral term, but the current configuration uses $K_i=0$. The implemented controller therefore operates as a PD controller.
