@@ -390,11 +390,9 @@ Indoor-UAV-Navigation/
 ├── run_navigation_simulation.m
 │
 ├── Control/
-│   ├── README.txt
 │   └── pid_controller.m
 │
 ├── Dynamics/
-│   ├── README.txt
 │   └── update_uav.m
 │
 ├── Environment/
@@ -403,11 +401,8 @@ Indoor-UAV-Navigation/
 │   ├── create_test_scenarios.m
 │   └── plot_environment.m
 │
-├── Localization/
-│   └── README.txt
 │
 ├── Planning/
-│   ├── README.txt
 │   └── astar.m
 │
 ├── Sensors/
